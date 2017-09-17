@@ -1,0 +1,12 @@
+body {
+	background-color: rgba(40,60,40,0.5);
+
+}
+table {
+	width: 100%;
+}
+td {
+	border: 1px solid black;
+}
+
+

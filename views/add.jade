@@ -1,0 +1,23 @@
+extends layout
+block content
+  .main.container
+    .row
+      .col-md-6.col-md-offset-3
+        h1.display-4.m-b-2 Save password
+        // register form
+        if (user)
+          form(method='POST' action='/add')
+            div.form-group
+              label(for='service') Service:
+              input#service.form-control(type='text', placeholder='http://mail.google.com' name='service')
+            div.form-group
+              label(for='username') Username:
+              input#username.form-control(type='text', placeholder='admin' name='username')
+            div.form-group
+              label(for='password') Password:
+              input#password.form-control(type='text', placeholder='_Sup3R_Str0nG#P4ssw0rd' name='password')
+            div.form-group.cold-md-4
+              label(for='Notes') Notes:
+              textarea#notes.form-control(type='text', placeholder='Alternative login: mail.google.ch' name='notes')
+            button.btn.btn-primary(type='submit') Save
+

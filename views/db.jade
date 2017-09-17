@@ -1,0 +1,27 @@
+extends layout
+block content
+  head
+    link(rel='stylesheet', href='stylesheets/s.css')
+  
+  if (user)
+    body
+      div
+        table
+          thead
+            th service
+            th username
+            th password
+            th notes
+          tbody
+            each s in service
+              tr
+                td
+                  p= s.service
+                td
+                  p= s.username
+                td
+                  p= s.password
+                td
+                  p= s.notes
+        
+        a(href="/add") Add Entry

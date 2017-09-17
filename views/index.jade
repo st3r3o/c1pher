@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  if (!user)
+    a(href="/login") Login
+    br
+
+  if (user)
+    p You are currently logged in as #{user.username}
+    a(href="/logout") Logout
+    br
+    a(href="/db") DB
+    br
+    a(href="/add") Add Entry
